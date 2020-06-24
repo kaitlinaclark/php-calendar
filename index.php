@@ -15,10 +15,10 @@ session_start();
     <title>Calendar</title>
     
     <!--JQuery-->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
     <!--Calendar JS-->
-    <script type="text/javascript" src="http://classes.engineering.wustl.edu/cse330/content/calendar.min.js"></script>
-    <script type="text/javascript" src="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://classes.engineering.wustl.edu/cse330/content/calendar.min.js"></script>
+    <script type="text/javascript" src="calendar.js"></script>
 </head>
 <body>
     <!--is someone logged in-->
@@ -44,24 +44,24 @@ session_start();
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
                             <li class="active nav-item">
-                                <a href="/~kaitlinaclark/calendar/index.php" class="nav-link">Home <span class="sr-only">(current)</span></a></li>
+                                <a href="index.php" class="nav-link">Home <span class="sr-only">(current)</span></a></li>
                             <li style="<?php echo $login; ?>" class="nav-item">
-                                <a href="/~kaitlinaclark/calendar/login.php" class="nav-link" id="login">
+                                <a href="login.php" class="nav-link" id="login">
                                         Login
                                 </a>
                             </li>
                             <li style="<?php echo $create_event; ?>" class="nav-item">
-                                <a href="/~kaitlinaclark/calendar/create_event.php" class="nav-link" id="create">
+                                <a href="create_event.php" class="nav-link" id="create">
                                         Create Event
                                 </a>
                             </li>
                             <li style="<?php echo $signout; ?>" class="nav-item">
-                                <a href="/~kaitlinaclark/calendar/signout.php" class="nav-link" id="out">
+                                <a href="signout.php" class="nav-link" id="out">
                                         Sign Out
                                 </a>
                             </li>
                             <li style="<?php echo $signup; ?>" class="nav-item">
-                                <a href="/~kaitlinaclark/calendar/signup.php" class="nav-link">
+                                <a href="signup.php" class="nav-link">
                                         Sign Up
                                 </a>
                             </li>                      
