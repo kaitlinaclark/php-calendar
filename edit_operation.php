@@ -27,6 +27,6 @@ session_start();
                 echo json_encode(array("success" => true, "message" => "Event Edited"));
 
             //redirect to index page
-            header("Location: http://ec2-18-191-196-37.us-east-2.compute.amazonaws.com/~kaitlinaclark/calendar/index.php");
+            header("Location: http://ec2-18-220-33-4.us-east-2.compute.amazonaws.com/calendar/index.php");
         }		
 ?>

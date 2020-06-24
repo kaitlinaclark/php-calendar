@@ -16,10 +16,10 @@ session_start();
     <title>Edit Event</title>
     
     <!--JQuery-->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
     <!--Calendar JS-->
     <script type="text/javascript" src="http://classes.engineering.wustl.edu/cse330/content/calendar.min.js"></script>
-    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="calendar.js"></script>
 </head>
 
 <body>
@@ -51,24 +51,24 @@ session_start();
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li class="active nav-item">
-                            <a href="/~kaitlinaclark/calendar/index.php" class="nav-link">Home <span class="sr-only">(current)</span></a></li>
+                            <a href="index.php" class="nav-link">Home <span class="sr-only">(current)</span></a></li>
                         <li class="nav-item">
-                            <a style="<?php echo $login ?>" href="/~kaitlinaclark/calendar/login.php" class="nav-link" id="login">
+                            <a style="<?php echo $login ?>" href="login.php" class="nav-link" id="login">
                                 Login
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a style="<?php echo $create_event; ?>"href="/~kaitlinaclark/calendar/create_story.php" class="nav-link" id="create">
+                            <a style="<?php echo $create_event; ?>"href="create_event.php" class="nav-link" id="create">
                                 Create Event
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a style="<?php echo $signout; ?>" href="/~kaitlinaclark/calendar/signout.php" class="nav-link" id="out">
+                            <a style="<?php echo $signout; ?>" href="signout.php" class="nav-link" id="out">
                                 Sign Out
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a style="<?php echo $signup; ?>" href="/~kaitlinaclark/calendar/signup.php" class="nav-link">
+                            <a style="<?php echo $signup; ?>" href="signup.php" class="nav-link">
                                 Sign Up
                             </a>
                         </li>
@@ -81,7 +81,7 @@ session_start();
 		date_default_timezone_set('America/Chicago');
 		$event_id = (int) $_GET['Event'];
 		
-        $url="http://ec2-18-191-196-37.us-east-2.compute.amazonaws.com/~kaitlinaclark/calendar/delete.php?Event=".$event_id;
+        $url="http://ec2-18-220-33-4.us-east-2.compute.amazonaws.com/calendar/delete.php?Event=".$event_id;
         $delete_button=sprintf("
             <a href='%s' class='btn btn-primary'>Delete</a>
             ", $url);
