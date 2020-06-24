@@ -39,16 +39,10 @@ session_start();
             }
         ?>
         <!--NAVIGATION BAR -->
-        <header>
-            <nav class="navbar navbar-light bg-light navbar-expand-md">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <!-- Button that toggles the navbar on and off on small screens -->
-                <button type="button" class="navbar-toggler collapsed" data-toggle="collapse"
-                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <!-- Hides information from screen readers --> <span class="sr-only"></span>
-                    <!-- Draws 3 bars in navbar button when in small mode -->&#x2630;</button>
+        <header class="row">
+            <nav class="navbar navbar-light bg-light navbar-expand col-12">
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="collapse navbar-collapse justify-content-center" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li class="active nav-item">
                             <a href="index.php" class="nav-link">Home <span class="sr-only">(current)</span></a></li>
@@ -76,13 +70,23 @@ session_start();
                 </div>
             </nav>
         </header>
-	<h1> Create New Event </h1>
-	<form action="<?php echo htmlentities($_SERVER['PHP_SELF']);?>" method="POST">
-    <p>Event Title: <input type="text" name="event_title" required></p>
-        Date: <input type="date" name="date" >
-		Time: <input type="time" name="time" >
-	<input type="submit" value="Submit">
-	</form>
+	<div class="row justify-content-center align-items-center">
+		<form action="<?php echo htmlentities($_SERVER['PHP_SELF']);?>" method="POST">
+    		<h4 class="card-title text-center mb-4 mt-1">Create New Event</h4>
+		<div class="form-group">
+			<label for="event_title" class="text-info">Event Title:</label>
+			 <input class="form-control" type="text" name="event_title" required>
+		</div>
+		<div class="form-group">
+			<label for="date" class="text-info">Date:</label>
+        		<input class="form-control" type="date" name="date" >
+			
+			<label for="time" class="text-info">Time</label>
+			<input class="form-control" type="time" name="time">
+		</div>
+		<input class="btn btn-primary btn-block" type="submit" value="Submit">
+		</form>
+	</div>
     <?php
         require 'connect.php';
         

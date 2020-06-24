@@ -39,17 +39,10 @@ session_start();
             }
         ?>
         <!--NAVIGATION BAR -->
-        <header>
-            <nav class="navbar navbar-light bg-light navbar-expand-md">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <!-- Button that toggles the navbar on and off on small screens -->
-                <button type="button" class="navbar-toggler collapsed" data-toggle="collapse"
-                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <!-- Hides information from screen readers --> <span class="sr-only"></span>
-                    <!-- Draws 3 bars in navbar button when in small mode -->&#x2630;</button>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
+	<header class="row">
+            <nav class="navbar navbar-light bg-light navbar-expand col-12">
+                <!-- Collect the nav links, forms, and other content for toggling -->                                                                                  <div class="collapse navbar-collapse justify-content-center" id="bs-example-navbar-collapse-1">                    
+			<ul class="nav navbar-nav">
                         <li class="active nav-item">
                             <a href="index.php" class="nav-link">Home <span class="sr-only">(current)</span></a></li>
                         <li class="nav-item">
@@ -71,13 +64,51 @@ session_start();
                 </div>
             </nav>
         </header>
+
+
+<div class="card">
+<article class="card-body">
+	<h4 class="card-title text-center mb-4 mt-1">Sign up</h4>
+	<hr>
+	
 	<form action="<?php echo htmlentities($_SERVER['PHP_SELF']);?>" method="POST">
-	<p>First Name: <input type="text" name="first" required></p>
-    <p>Last Name: <input type="text" name="last" required></p>
-    <p>New Username: <input type="text" name="username" required></p>
-    <p>New Password: <input type="password" name="psw" required></p>
-	<input type="submit" value="Submit">
+	
+	<div class="form-group">
+    		<label>First Name</label>
+        	<input name="first" class="form-control" placeholder="First name" type="text" required>
+    	</div>
+	<div class="form-group">
+    		<label>Last Name</label>
+        	<input name="last" class="form-control" placeholder="Last name" type="text" required>
+    	</div>
+	<div class="form-group">
+		<div class="input-group">
+			<div class="input-group-prepend">
+		    		<span class="input-group-text"> <i class="fa fa-user"></i> </span>
+			</div>
+			<input name="username" class="form-control" placeholder="Username" type="text" required>
+		</div> 
+	</div> 
+	<div class="form-group">
+		<div class="input-group">
+			<div class="input-group-prepend">
+		    		<span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+		 	</div>
+	    		<input class="form-control" placeholder="******" type="password" name="psw" required>
+			<input class="form-control" placeholder="Re-type Password" type="password" name="psw2" required>
+		</div>
+	</div> 
+	<div class="form-group">
+		<input type="submit" value="Submit" class="btn btn-primary btn-block">
+	</div>
 	</form>
+</article>
+</div> 
+
+
+
+
+
 	<?php
         require 'connect.php';
 

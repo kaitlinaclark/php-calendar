@@ -38,10 +38,10 @@ session_start();
         ?>
     <!--template for calendar: https://codepen.io/chrisdpratt/pen/OOybam/-->
         <div class="container-fluid">
-            <header>
-                <nav class="navbar navbar-light bg-light navbar-expand-md">
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <header class="row">
+              <nav class="navbar navbar-light bg-light navbar-expand col-12">
+	      <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse justify-content-center" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
                             <li class="active nav-item">
                                 <a href="index.php" class="nav-link">Home <span class="sr-only">(current)</span></a></li>
@@ -68,25 +68,29 @@ session_start();
                         </ul>
                     </div>
                 </nav>
-                <!-- Display Month and Year-->
-                <button type="button" class="btn btn-default" id="prev">&lt;</button>
-
-                <h4 class="display-4 mb-4 text-center" id="month_year"></h4>
-
-                <button type="button" class="btn btn-default" id="next">&gt;</button>
-
-                <div class="row d-none d-sm-flex p-1 bg-dark text-white">
-                    <!-- Display Days of the Week-->
-                    <h5 class="col-sm p-1 text-center">Sunday</h5>
-                    <h5 class="col-sm p-1 text-center">Monday</h5>
-                    <h5 class="col-sm p-1 text-center">Tuesday</h5>
-                    <h5 class="col-sm p-1 text-center">Wednesday</h5>
-                    <h5 class="col-sm p-1 text-center">Thursday</h5>
-                    <h5 class="col-sm p-1 text-center">Friday</h5>
-                    <h5 class="col-sm p-1 text-center">Saturday</h5>
-                </div>
             </header>
-                <div class="row border border-right-0 border-bottom-0">
+
+		<!-- Display Month and Year-->
+               <span class="row"> 
+			<button type="button" class="btn btn-default col-3" id="prev">&lt;</button>                                                                       
+                	<h4 class="col-6 text-center" id="month_year"></h4>
+
+                	<button type="button" class="btn btn-default col-3 justify-content-end" id="next">&gt;</button>
+		</span>
+
+                <div class="row d-sm-flex d-none bg-dark text-white">                            
+		<!-- Display Days of the Week-->
+                    <h5 class="col-sm text-center">Sunday</h5>
+                    <h5 class="col-sm text-center">Monday</h5>
+                    <h5 class="col-sm text-center">Tuesday</h5>
+                    <h5 class="col-sm text-center">Wednesday</h5>
+                    <h5 class="col-sm text-center">Thursday</h5>
+                    <h5 class="col-sm text-center">Friday</h5>
+                    <h5 class="col-sm text-center">Saturday</h5>
+                </div>
+
+            
+    <div class="row border border-right-0 border-bottom-0">
                 <!--Display 42 default boxes-->
                 <!--box1-->
                     <!--Shaded gary bc not in month-->

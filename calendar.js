@@ -242,7 +242,7 @@ $(document).ready(function(){
                             let month = jsonData[loc].month;
                            //check if this event is in the right month
                             if (firstday_currMonth.getMonth()+1 == month){
-                                $(`#box${(day+firstday_currMonth.getDay())}`).append(`<a class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white" href="/~kaitlinaclark/calendar/edit.php?Event=${event_id}" id ="${event_id}">${event_title}</a>`);
+                                $(`#box${(day+firstday_currMonth.getDay())}`).append(`<a class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white" href="edit.php?Event=${event_id}" id ="${event_id}">${event_title}</a>`);
                         
                             }
                         }

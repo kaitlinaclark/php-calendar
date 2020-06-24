@@ -37,7 +37,7 @@ CREATE table events
 ) engine = InnoDB default character set = utf8 collate = utf8_general_ci;
 
 /*CREATIVE PORTION*/
-/*SHARED_EVENTS = reference to current user (current_user), reference to person event is being shared with (shared_with), reference to shared event (event_id)
+/*SHARED_EVENTS = reference to current user (current_user), reference to person event is being shared with (shared_with), reference to shared event (event_id)*/
 CREATE table shared_events
 ( share_event mediumint unsigned NOT NULL auto_increment,
     user mediumint unsigned NOT NULL,
@@ -48,11 +48,11 @@ CREATE table shared_events
     foreign key (event_id) references events (event_id)
 ) engine = InnoDB default character set = utf8 collate = utf8_general_ci;
 
-/*SHARED_CALENDARS = reference to current user (current_user), reference to person calendar is being shared with (shared_with)
+/*SHARED_CALENDARS = reference to current user (current_user), reference to person calendar is being shared with (shared_with)*/
 CREATE table shared_calendars
 ( share_calendar mediumint unsigned NOT NULL auto_increment,
     user mediumint unsigned NOT NULL,
     shareUsername VARCHAR(100) NOT NULL,
     primary key (share_calendar),
 	foreign key (user) references users (user_id)
-) engine = InnoDB default character set = utf8 collate = utf8_general_ci;*/
+) engine = InnoDB default character set = utf8 collate = utf8_general_ci;
