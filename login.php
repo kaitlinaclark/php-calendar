@@ -135,7 +135,7 @@ session_start();
                     $_SESSION["token"] = bin2hex(openssl_random_pseudo_bytes(32));
                     
                     //redirect to main page with user privileges
-                    header("Location: http://ec2-18-220-33-4.us-east-2.compute.amazonaws.com/calendar/index.php");
+                    header("Location: http://ec2-34-219-74-52.us-west-2.compute.amazonaws.com/~kaitlinaclark/calendar/php-calendar/index.php");
 
                 }
                 else{

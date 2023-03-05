@@ -138,7 +138,7 @@ session_start();
             $query_new_user->close();
 
             //redirect to login page
-            header("Location: http://ec2-18-220-33-4.us-east-2.compute.amazonaws.com/calendar/login.php");
+            header("Location: http://ec2-34-219-74-52.us-west-2.compute.amazonaws.com/~kaitlinaclark/calendar/php-calendar/login.php");
 
         }
 	
