@@ -2,15 +2,15 @@
 session_start();
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!--BOOTSTRAP CSS-->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />     
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
     
     <title>Calendar</title>
     
@@ -28,7 +28,7 @@ session_start();
             $signup = "display:run-in;";
             $signout = "display:none;";
             $create_event = "display:none;";
-            if(isset($_SESSION["username"])){
+            if (isset($_SESSION["username"])) {
                 //signed in= files, no login, no sign-up, home, no sign-in, sign-out, upload
                 $login = "display:none;";
                 $signup = "display:none;";
@@ -64,22 +64,21 @@ session_start();
                                 <a href="signup.php" class="nav-link">
                                         Sign Up
                                 </a>
-                            </li>                      
+                            </li>
                         </ul>
                     </div>
                 </nav>
             </header>
 
 		<!-- Display Month and Year-->
-               <span class="row"> 
-			<button type="button" class="btn btn-default col-3" id="prev">&lt;</button>                                                                       
-                	<h4 class="col-6 text-center" id="month_year"></h4>
-
-                	<button type="button" class="btn btn-default col-3 justify-content-end" id="next">&gt;</button>
+        <span class="row">
+            <button type="button" class="btn btn-default col-3" id="prev">&lt;</button>
+            <h4 class="col-6 text-center" id="month_year"></h4>
+            <button type="button" class="btn btn-default col-3 justify-content-end" id="next">&gt;</button>
 		</span>
 
-                <div class="row d-sm-flex d-none bg-dark text-white">                            
-		<!-- Display Days of the Week-->
+                <div class="row d-sm-flex d-none bg-dark text-white">
+                    <!-- Display Days of the Week-->
                     <h5 class="col-sm text-center">Sunday</h5>
                     <h5 class="col-sm text-center">Monday</h5>
                     <h5 class="col-sm text-center">Tuesday</h5>
